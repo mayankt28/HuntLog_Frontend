@@ -1,0 +1,44 @@
+/* src/index.css */
+
+/* Load your custom font FIRST, before anything else */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Then import Tailwind CSS */
+@import "tailwindcss";
+
+/* Add the forms plugin */
+@plugin "@tailwindcss/forms";
+
+@theme {
+  /* Discord Colors */
+  --color-discord-background: #2C2F33;
+  --color-discord-primary: #5865F2;
+  --color-discord-primary-dark: #4752C4; /* Added for hover/active */
+  --color-discord-dark: #23272A;
+  --color-discord-accent: #7289DA;
+  --color-discord-accent-dark: #5F73BF; /* Added for hover/active */
+  --color-discord-text: #FFFFFF;
+
+  /* Arcade Colors */
+  --color-arcade-neonGreen: #39FF14;
+  --color-arcade-neonPink: #FF6EC7;
+  --color-arcade-neonBlue: #00FFFF;
+  --color-arcade-shadow: #000000;
+
+  /* Font Family */
+  --font-pixel: "Press Start 2P", "monospace";
+}
+
+/* Custom styles for the pixelated shadow */
+.shadow-pixel {
+  text-shadow: 2px 2px var(--color-arcade-shadow); /* Adjust size as needed */
+}
+
+/* Animation for skeleton loading */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
