@@ -19,7 +19,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
   return (
     <nav className="w-full bg-discord-dark px-6 py-3 shadow-arcade-shadow flex items-center justify-between relative z-50">
       <Link to="/" className="text-discord-accent font-pixel text-2xl hover:text-discord-primary">
-        JobHunt
+        HuntLog
       </Link>
 
       {user && (
